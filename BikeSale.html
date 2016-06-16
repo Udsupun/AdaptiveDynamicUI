@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tharuka Bike Sale</title>
+
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<script src="/Bike.js"></script>
+
+
+	</head>
+	<body ng-app="myApp">
+
+		<div class="col-sm-2 col-md-2 col-lg-2" style="background-color:#D8D8D8;height: 700px">
+
+		</div>
+		
+		<div class="col-sm-8 col-md-8 col-lg-8" style="background-color:black;height: 700px">
+			<div class="row" style="background-color:;height: 100px;color:blue">
+				<h1 style="">&nbsp;&nbsp;&nbsp;Welcome to Tharuka Bike Sale</h1>
+
+			</div>
+			<div class="row" style="color:#2E9AFE;" >
+				<div class="col-sm-2 col-md-2 col-lg-2">
+					
+				</div>
+				<div class="col-sm-8 col-md-8 col-lg-8">
+					<p>Enter Bike Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text" name="bikeName"></p>
+					<p>Enter Company Name: <input type="text" name="companyName"></p>
+					<p>Enter Minimum Cost&nbsp;&nbsp;&nbsp;: <input type="text" name="minCost"></p>
+				</div>
+				<div class="col-sm-2 col-md-2 col-lg-2">
+					
+				</div>
+				
+			</div>
+			<div class="row" style="background-color: #151515;color: white" ng-controller="myController">
+				<!--
+				<ul>
+				  <li ng-repeat="x in Bike">
+				    {{ x.bikeName + '  ' + x.CompanyName + '  ' + x.engineCapacity }}
+				    <hello-World/>
+				  </li>
+				</ul>
+				-->
+				<hello-world/>
+			</div>
+			
+			
+		</div>
+
+		<div class="col-sm-2 col-md-2 col-lg-2" style="background-color:#D8D8D8;height: 700px">
+
+		</div>
+
+	</body>
+</html>

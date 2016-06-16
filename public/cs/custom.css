@@ -1,0 +1,104 @@
+.test{
+	background-color: red;
+}
+
+.navbar-custom {
+    background-color:#0B2161;
+    color:#ffffff;
+    border-radius:0;
+}
+
+.navbar .nav > li > a, .navbar .nav > li > a:first-letter {
+color:          lightgray;
+text-shadow:    none;
+}
+
+/* Adjust Menu colors - Hover */
+.navbar .nav > li > a:hover, .navbar .nav > li > a:hover:first-letter { 
+color:          Black;                      
+text-shadow:    none;
+}
+
+
+
+.divColor{
+	background: #BDBDBD;
+	height:600px;
+}
+
+
+.marginDiv{
+	margin-right:0.5cm;
+	margin-left:0.5cm;
+	margin-top:1.5cm;
+  background-image: url("img/bg6.jpg");
+
+}
+
+.resultDivMargine{
+	margin-right:5px;
+	margin-left:5px;
+	margin-top:10px;
+}
+.anualResult{
+	margin-top: 10px;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-bottom: 10px;
+}
+
+
+button:active{
+    background:olive;
+}
+button:focus{
+    background:olive;
+}
+
+
+/*
+@media screen and (max-width: 992px) {
+  p,.btn,input,div,span,h4 {
+    font-size: 98%;
+  }
+  h1 {
+    font-size: 24px;  
+  }
+  h2 {
+    font-size: 22px;  
+  }
+  h3 {
+    font-size: 20px;  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  p,.btn,input,div,span,h4 {
+    font-size: 95%;
+  }
+  h1 {
+    font-size: 22px;  
+  }
+  h2 {
+    font-size: 20px;  
+  }
+  h3 {
+    font-size: 18px;  
+  }
+}
+.pray{
+
+}
+
+*/
+
+/* Large desktops and laptops */
+
+
+
+
+
+
+
+
+

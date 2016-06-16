@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+		<title>Single page web app using Angularjs</title>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="/cs/custom.css">
+		<script src="/js/custom.js"></script>
+		<!--<script src="script.js"></script>-->
+		<script >
+			$(document).ready(function(){
+				
+				$("#login_form").hide();
+				$("#login_warning").hide();
+				$("#user_warning").hide();
+				$("#user_Account").hide();
+				
+				
+				
+				/*
+				$('#login_btn').click(function(){
+					var data = {"email":$('#email').val(), "password": $('#password').val()}
+			        alert ('ajax start: ' + JSON.stringify(data));
+				});
+				*/
+				register_btn_click_event();
+				login_link_click_event();
+				login_btn_click_event();
+				cancel_btn_click_event();
+				//msg();
+				
+				/*
+				$("#login_btn").click(function(){
+					//msg();
+					$("#login_form").hide();
+					$("#user_Account").show();
+					
+					$("#login_warning").hide();
+					$("#user_warning").show();
+
+				});
+				*/
+			});
+
+
+		</script>
+
+
+
+
+	</head>
+	<body>
+		
+		<!--
+			<div>
+				<nav class="navbar navbar-inverse" role="navigation" style="padding-left:130px;">
+				    <ul class="nav navbar-nav">
+				      <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
+				      <li><a href="/about">About us</a></li>
+				      <li><a href="/contact">Contact us</a></li>
+				    </ul>
+				</nav>
+			</div>
+		-->
+
+			<div class="row" >
+			<!--  Nav bar  -->
+				<div class="container-fluid">
+					<nav class="navbar navbar-custom navbar-fixed-top" id="mainNav" role="navigation" style="margin-bottom:;">
+						 <div class="container-fluid">
+						    <!-- Brand and toggle get grouped for better mobile display -->
+						    <div class="navbar-header">
+						      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						        <span class="sr-only">Toggle navigation</span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						      </button>
+						      <a class="navbar-brand" href="#">Brand</a>
+						    </div>
+							<div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
+						      	<ul class="nav navbar-nav">
+							 
+							        <button class="btn btn-default" type="button" style="margin-top: 5px;background-color: #0B2161;color: #D8D8D8;height: 40px;width: 100px;border:none;active:black" onclick="view_Home_Page()" >Home</button>
+							        <button class="btn btn-default" type="button" style="margin-top: 5px;background-color: #0B2161;color: #D8D8D8;height: 40px;width: 100px;border:none" onclick="view_Components_Page()" >Components</button>
+							        
+							        <button class="btn btn-default" type="button" style="margin-top: 5px;background-color: #0B2161;color: #D8D8D8;height: 40px;width: 130px;border:none" onclick="view_Getting_Start_Page()" > Getting Start</button>
+							        <!--
+							        <button class="btn btn-default" type="button" style="margin-top: 5px;background-color: #0B2161;color: #D8D8D8;height: 40px;width: 130px;border:none" onclick="" >Contact US</button>
+							        -->
+					        
+					      		</ul>
+					    	</div>
+					  	</div>
+					</nav>
+				</div>
+		</div>
+		<!-- Home Page -->
+		<div class="row" id="Home" style="background-color: #E6E6E6;height: 650px">
+			<div class="row" style="background-color: #A9A9F5;height: 50px">
+				
+			</div>
+			<div class="row" style="background-color: #A9A9F5; height: 70px">
+				
+				<div class="col-lg-2 col-xm-2 col-md-1 col-xs-1 col-sm-1" >
+						
+				</div>
+				<div class="col-lg-8 col-xm-8 col-md-10 col-xs-10 col-sm-10">
+						
+						
+						<h1>Welcome To Adaptive and Dynamic UI Framework</h1>
+				</div>
+				<div class="col-lg-2 col-xm-2 col-md-1 col-xs-1 col-sm-1">
+						
+				</div>
+				
+			</div>
+			<div class="row" style="height: 480px">
+				
+			</div>
+			<div class="row" style="background-color:;height: 50px">
+				
+			</div>
+		</div>
+
+
+		<!-- Component Page -->
+		<div class="row" id="Component" style="background-color: #A4A4A4;height: 650px">
+			<div class="row" style="background-color: #E6E6E6;height: 50px">
+				
+			</div>
+			<div class="row " style="background-color: #A9A9F5; height: 70px">
+				<div class="col-md-2 col-sm-2">
+
+				</div>
+				<div class="col-md-8 col-sm-8">
+					<h1> About Components</h1>
+				</div>
+				<div class="col-md-2 col-sm-2">
+
+				</div>
+			</div>
+			<div class="row" style="height: 480px">
+				
+			</div>
+			<div class="row" style="background-color:;height: 50px">
+				
+			</div>
+		</div>
+
+
+		<!-- Getting Start Page -->
+		<div class="row" id="Getting_Start" style="background-color: #E6E6E6;height: 650px">
+			<div class="row" style="background-color: #A4A4A4;height: 50px">
+				
+			</div>
+			<div class="row" style="background-color: #A9A9F5; height: 70px">
+				<div class="col-md-2">
+
+				</div>
+				<div class="col-md-8">
+					<h1> Getting Start </h1>
+				</div>
+				<div class="col-md-2">
+
+				</div>
+			</div>
+			
+			<div class="row" style="height: 480px">
+			
+				<div class="row" style="background-color: ; height: 50px">
+					<div class="col-lg-2 col-md-2 col-sm-2">
+
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8">
+						<h4 id="register_warning">First you getting start you have to register...</h4>
+						<h4 id="login_warning">Please login to System...</h4>
+						<h4 id="user_warning">Your logged in as <span id=fullname>firstname lastname</span>...</h4>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2">
+
+					</div>
+					
+				</div>
+				<div class="row" style="height: 420px">
+					<div class="col-lg-3 col-md-3 col-sm-3" style="background-color: ;height: 420px">
+						
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6" style="background-color:white ;height: 420px">
+						<div class="col-lg-2 col-md-2 col-sm-2">
+							
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8">
+						  <!-- ################################  Login Form ################################################-->
+						  <!-- action="/login_process_post" -->
+							<form class="form-horizontal" id="login_form" action="" method="">
+								<fieldset>
+									<br>
+									<br>
+									<div id="legend">
+								      <legend class="">Login Form</legend>
+								    </div>
+
+								    <div class="control-group">
+								      <!-- E-mail -->
+								    	<label class="control-label" for="email">E-mail</label>
+									    <div class="controls">
+									        <input type="text" id="email" name="email" placeholder="" class="input-xlarge" required>
+									        <p class="help-block">Please Enter your E-mail </p>
+									    </div>
+							    	</div>
+							 	
+								 	<div class="control-group">
+								      <!-- Password -->
+								     	<label class="control-label"  for="password"> Password</label>
+								     	<div class="controls">
+								       		<input type="password" id="password" name="password" placeholder="" class="input-xlarge" required>
+								       		<p> </p>
+								      	</div>
+								    </div>
+
+								    <div class="control-group">
+								     	<!-- Button -->
+								     	<div class="controls">
+								     		
+								        	<button class="btn btn-success" id="login_btn" type="submit">Login</button>
+								        	<button class="btn" id="cancel_login">cancel</button>
+								    	</div>
+								    	<span id = "status"></span>
+								    </div>
+
+								</fieldset>
+							</form>
+							<!-- ####################################################################################-->
+
+
+							<!-- ############################  Registration Form ############################################-->
+							<form class="form-horizontal" action="" method="" id="register_form">
+							  <fieldset>
+							    <div id="legend">
+							      <legend class="">Registration Form</legend>
+							    </div>
+							    <div class="control-group">
+							      <!-- Username -->
+							      <label class="control-label"  for="firstname">First Name:</label>
+							      <div class="controls">
+							        <input type="text" id="rfirstname" name="firstname" placeholder="" class="input-xlarge" required>
+							        <p class="help-block">First Name can contain any letters or numbers, without spaces</p>
+							      </div>
+							    </div>
+							    <div class="control-group">
+							      <!-- LastName -->
+							      <label class="control-label"  for="lastname"> Last Name:</label>
+							      <div class="controls">
+							        <input type="text" id="rlastname" name="lastname" placeholder="" class="input-xlarge" required>
+							        <p class="help-block">Last Name can contain any letters or numbers, without spaces</p>
+							      </div>
+							    </div>
+							 
+							    <div class="control-group">
+							      <!-- E-mail -->
+							      <label class="control-label" for="email">E-mail</label>
+							      <div class="controls">
+							        <input type="text" id="remail" name="remail" placeholder="" class="input-xlarge" required>
+							        <p class="help-block">Please provide your E-mail (your email use as your username) </p>
+							      </div>
+							    </div>
+							 	
+							 	<div class="control-group">
+							      <!-- Password -->
+							      <label class="control-label"  for="password"> Password</label>
+							      <div class="controls">
+							        <input type="password" id="rpassword" name="password" placeholder="" class="input-xlarge" required>
+							        <p></p>
+							      </div>
+							    </div>
+							    
+							 
+							    <div class="control-group">
+							      <!-- Button -->
+							      <div class="controls">
+							        <button class="btn btn-success" id="register_btn" type="submit">Register</button>
+							      </div>
+							    </div>
+							  </fieldset>
+							</form>
+							<!-- ####################################################################################-->
+
+							<!-- ############################  User Account ############################################-->
+							<div id ="user_Account">
+								<fieldset>
+									<br>
+									<br>
+									<div id="legend">
+										<!--<span id="greeting"> </span>-->
+							      		<legend id="greeting">Welcome to firstname lastname</legend>
+							    	</div>
+							    	<div class="control-group">
+								      <!-- Password -->
+								    	
+								    	<div class="controls">
+									        <p> Now you can download belove package and getting start </p>
+									        <a href="/js/ui_package.js" download> <img src="images/folder.png" style="height: 50px;width:50px">Download Package</a>
+								      	</div>
+							    	</div>
+								</fieldset>
+							</div>
+							<!-- ####################################################################################-->
+
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2">
+							
+						</div>
+
+						
+						
+						
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3" style="background-color: ;height: 420px">
+						
+					</div>
+				</div>
+				<div class="row" style="background-color: ;height: 50px">
+					<div class="col-lg-4 col-md-4 col-sm-4">
+
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<h5 id="login_link">If you already registered <a id="login">loging to your acount</a></h5>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+
+					</div>
+				</div>
+				
+
+			</div>
+			
+			<div class="row" style="background-color:;height: 50px">
+				
+			</div>
+		</div>
+
+
+
+
+
+
+
+			<!--
+			
+			<div class="row jumbotron">
+				
+				<form action="http://127.0.0.1:8080/process_get" method="GET">
+					First Name: <input type="text" name="first_name" required>  <br>
+
+					Last Name: <input type="text" name="last_name" required><br>
+					E-mail:<input type="email" name="email" required><br>
+					<input type="submit" value="Submit">
+
+				</form>
+
+				<form action="http://127.0.0.1:8080/process_post" method="POST">
+					First Name: <input type="text" name="first_name">  <br>
+
+					Last Name: <input type="text" name="last_name">
+					<input type="submit" value="Submit">
+				</form>
+				
+				
+				
+				<img class="" src="http://localhost:8080/images/q1.jpg" alt="My_Logo">
+				<img class="" src="/images/q1.jpg" alt="My_Logo">
+				
+			</div>
+			-->
+		
+	</body>
+</html>
